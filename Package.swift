@@ -10,6 +10,6 @@ let package = Package(
     dependencies: [ .package(url: "https://github.com/mumuss/SwiftLibXML.git", .branch("master")) ],
     targets: [
         .target(name: pkgName, dependencies: ["SwiftLibXML"]),
-        .testTarget(name: "\(pkgName)Tests", dependencies: [.byNameItem(name: pkgName)]),
+        .testTarget(name: "\(pkgName)Tests", dependencies: [._byNameItem(name: pkgName)]),
     ]
 )
